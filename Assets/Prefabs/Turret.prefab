@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4571611126866247010}
   - component: {fileID: 5950863365099516579}
+  - component: {fileID: 8370844511638459874}
   m_Layer: 0
   m_Name: Turret
-  m_TagString: Untagged
+  m_TagString: Turret
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30,6 +31,7 @@ Transform:
   m_Children:
   - {fileID: 8152110587634633510}
   - {fileID: 7567853772427489365}
+  - {fileID: 7586572939492921381}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -45,6 +47,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ae870089c3d9804381e4c50bbe2834a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  firePoint: {fileID: 0}
+  bulletPrefab: {fileID: 0}
+--- !u!65 &8370844511638459874
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128835262531404369}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 2, z: 2}
+  m_Center: {x: 0, y: 0.8, z: 0}
 --- !u!1 &4504712353821264134
 GameObject:
   m_ObjectHideFlags: 0
@@ -56,7 +73,6 @@ GameObject:
   - component: {fileID: 7567853772427489365}
   - component: {fileID: 5197464793493616138}
   - component: {fileID: 7368533652362571668}
-  - component: {fileID: 5773979369931103949}
   m_Layer: 0
   m_Name: Barrel
   m_TagString: Untagged
@@ -124,20 +140,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!136 &5773979369931103949
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4504712353821264134}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!1 &5524654104659324402
 GameObject:
   m_ObjectHideFlags: 0
@@ -149,7 +151,6 @@ GameObject:
   - component: {fileID: 8152110587634633510}
   - component: {fileID: 5841149112550123781}
   - component: {fileID: 7785515220175463051}
-  - component: {fileID: 5594726827690673560}
   m_Layer: 0
   m_Name: Chassis
   m_TagString: Untagged
@@ -217,16 +218,33 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &5594726827690673560
-BoxCollider:
+--- !u!1 &7033076356643298608
+GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5524654104659324402}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7586572939492921381}
+  m_Layer: 0
+  m_Name: Fire Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7586572939492921381
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7033076356643298608}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.11, z: 2.27}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4571611126866247010}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
