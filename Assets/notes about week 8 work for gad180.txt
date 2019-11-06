@@ -1,0 +1,16 @@
+
+	https://github.com/aaronatSAE/WordsNumbersAndLetters
+
+	TODO
+	- Make turret shoot			DONE
+	  - Make bullet				DONE
+	  - Spawn bullet on command		DONE
+	- Enemy spawner				DONE
+	- Make enemies die			DONE
+	- Make the player's character die	DONE
+
+	DESIREABLES
+	- Enemies randomly spawning
+	- Homing missile
+	- More types of enemies
+	- Some other ~fancy~ thing
